@@ -101,7 +101,7 @@ export default function App() {
 
     const currentYear = new Date().getFullYear();
 
-    if (numericYear < MIN_YEAR) {
+    if (numericYear < MIN_YEAR || numericYear > currentYear) {
       Alert.alert(
         'Validation Error',
         `Album year must be between ${MIN_YEAR} and ${currentYear}.`
