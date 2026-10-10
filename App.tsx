@@ -156,7 +156,7 @@ export default function App() {
       rating: Number(rating),
     };
 
-    setAlbums([temporaryAlbum]);
+    setAlbums((currentAlbums) => [...currentAlbums, temporaryAlbum]);
 
     setTitle('');
     setArtist('');
