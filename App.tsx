@@ -167,7 +167,7 @@ export default function App() {
 
   const handleDelete = (id: string) => {
     setAlbums((currentAlbums) =>
-      currentAlbums.filter((album) => album.id === id)
+      currentAlbums.filter((album) => album.id !== id)
     );
   };
 
@@ -250,7 +250,7 @@ export default function App() {
 
       <FlatList
         data={albums}
-        keyExtractor={(item) => item.title}
+        keyExtractor={(item) => item.id}
         renderItem={renderAlbum}
         ListEmptyComponent={
           <Text style={styles.emptyMessage}>
