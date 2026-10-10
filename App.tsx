@@ -126,7 +126,7 @@ export default function App() {
       return false;
     }
 
-    if (numericRating < 1) {
+    if (numericRating < 1  || numericRating > MAX_RATING) {
       Alert.alert(
         'Validation Error',
         `Rating must be between 1 and ${MAX_RATING}.`
